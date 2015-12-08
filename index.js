@@ -52,6 +52,10 @@ function convert(val) {
     return bool(val);
   }
 
+  if (Buffer.isBuffer(val)) {
+    return buffer(val);
+  }
+
   if (Array.isArray(val)) {
     return array(val);
   }
@@ -94,6 +98,14 @@ function array(val) {
     result.push(convert(val[i]));
   }
   return { L: result };
+}
+
+/**
+ * Buffer.
+ */
+
+function buffer(val) {
+  return { B: val.toString('base64') };
 }
 
 /**

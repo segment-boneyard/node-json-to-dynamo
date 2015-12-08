@@ -104,6 +104,17 @@ describe('jsonToDynamo(json)', function() {
     });
   });
 
+  it('should handle buffers', function() {
+    var buf = new Buffer(`i'm a buffer.`);
+    var json = { buffer: buf };
+    var dynamo = jsonToDynamo(json);
+    assert.deepEqual(dynamo, {
+      buffer: {
+        B: buf.toString('base64')
+      }
+    });
+  });
+
   it('should handle arrays of mixed types', function() {
     var json = [ 'foo', 42, { blah: 'blah' } ];
     var dynamo = jsonToDynamo(json);
