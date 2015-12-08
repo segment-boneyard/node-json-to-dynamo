@@ -15,5 +15,6 @@
     "eslint": "^1.10.3",
     "eslint-config-segment": "^2.2.0",
     "mocha": "^2.3.4"
-  }
+  },
+  "repository": "git+https://github.com/segmentio/node-json-to-dynamo.git"
 }
