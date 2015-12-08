@@ -1,6 +1,6 @@
 {
   "name": "json-to-dynamo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "JSON -> Dynamo",
   "main": "index.js",
   "scripts": {
