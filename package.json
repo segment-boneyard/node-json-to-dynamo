@@ -11,10 +11,6 @@
     "dynamodb"
   ],
   "license": "MIT",
-  "dependencies": {
-    "component-type": "^1.2.0",
-    "debug": "^2.2.0"
-  },
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-segment": "^2.2.0",
